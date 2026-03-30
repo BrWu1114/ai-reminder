@@ -1,0 +1,14 @@
+{
+  "name": "ai-reminder",
+  "version": "1.0.0",
+  "scripts": {
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "setup": "npm run install:all && cp -n backend/.env.example backend/.env 2>/dev/null; echo 'Setup done — edit backend/.env with your API keys'"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
