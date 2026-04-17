@@ -4,9 +4,14 @@
   "scripts": {
     "backend": "cd backend && npm run dev",
     "frontend": "cd frontend && npm run dev",
-    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install && cd ../openclaw/plugin && npm install",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "setup": "npm run install:all && cp -n backend/.env.example backend/.env 2>/dev/null; echo 'Setup done — edit backend/.env with your API keys'"
+    "setup": "npm run install:all && cp -n backend/.env.example backend/.env 2>/dev/null; echo 'Setup done — edit backend/.env with your API keys'",
+    "plugin:build": "cd openclaw/plugin && npm run build",
+    "plugin:dev": "cd openclaw/plugin && npm run dev",
+    "openclaw:install": "npm install -g openclaw@latest",
+    "openclaw:link-plugin": "cd openclaw/plugin && npm run build && openclaw plugin link .",
+    "openclaw:start": "openclaw start"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

@@ -8,6 +8,7 @@ import contextRouter from "./routes/context.js";
 import authRouter from "./routes/auth.js";
 import notificationsRouter from "./routes/notifications.js";
 import weatherRouter from "./routes/weather.js";
+import calendarRouter from "./routes/calendar.js";
 import { startScheduler } from "./scheduler.js";
 import { mkdirSync } from "fs";
 import { fileURLToPath } from "url";
@@ -28,6 +29,7 @@ app.use("/api/location", locationRouter);
 app.use("/api/context", contextRouter);
 app.use("/api/notifications", notificationsRouter);
 app.use("/api/weather", weatherRouter);
+app.use("/api/calendar", calendarRouter);
 app.use("/auth", authRouter);
 
 app.get("/health", (_req, res) => res.json({ status: "ok" }));

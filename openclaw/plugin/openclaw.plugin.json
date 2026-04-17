@@ -1,0 +1,7 @@
+{
+  "name": "openclaw-plugin-ai-reminder",
+  "version": "1.0.0",
+  "type": "plugin",
+  "description": "AI Personal Reminder — todos, location, weather, calendar, and proactive reminders",
+  "skills": ["../skills/ai-reminder"]
+}

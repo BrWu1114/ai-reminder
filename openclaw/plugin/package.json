@@ -1,0 +1,18 @@
+{
+  "name": "openclaw-plugin-ai-reminder",
+  "version": "1.0.0",
+  "description": "OpenClaw plugin for the AI Personal Reminder app — exposes todos, location, weather, calendar, and user context as agent tools",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "keywords": ["openclaw", "plugin", "reminder", "productivity"],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.4.0"
+  }
+}
